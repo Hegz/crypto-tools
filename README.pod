@@ -33,6 +33,7 @@ me know.
 A simple encoding or obfusticating method that came to my mind one day.  The 
 basics are that the characters in the coded string are the difference in place
 value between the current character and the previous character, given that A=1,
-B=2,C=3 etc.  Thus a string 'helloworld' becomes 'hxhadisdus'.
+B=2,C=3 etc.  Thus a string 'helloworld' becomes 'hxhadisdus'. The difference 
+between h and e being 23 or 'x', and the difference beween e an l is 8, thus 'h'
 
 =cut
