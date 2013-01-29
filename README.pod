@@ -15,7 +15,9 @@ This is a simple tool to xor the contents of a binary file with an ascii string.
 =head3 Options
 
 -i <file>  The input file
+
 -o <file>  The output string
+
 -s string  The Ascii string
 
 =head2 cypherplay.pl
@@ -25,6 +27,7 @@ A simple substitution cypher that I thought would be fun to play with.
 =head3 Options
 
 -s <string>        String to encode
+
 -d                 Decode flag.  Encode if not set
 
 =cut
