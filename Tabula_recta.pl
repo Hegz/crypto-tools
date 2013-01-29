@@ -51,13 +51,14 @@ unless ($opts{'p'}) {
 my @message = split(//, $opts{'s'});
 my @key = split(//,$opts{'k'});
 
-if ($opts{'a'}) {
-	push @key, @message;
-}
+
 
 my @out;
 unless ($opts{'d'}) {
 # Encode the message with the key
+	if ($opts{'a'}) {
+		push @key, @message;
+	}
 	my $key_count = 0;
 	for (@message) {
 		unless (defined $alpha2seq{$_}) {
@@ -87,6 +88,9 @@ else {
 			$coded += @alphabet;
 		}
 		push @out, $seq2alpha{$coded};
+		if ($opts{'a'}) {
+			push @key, $seq2alpha{$coded};
+		}
 		if (@key == $key_count){
 			$key_count = 0;
 		}
