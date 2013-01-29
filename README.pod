@@ -6,28 +6,31 @@ crypto-tools.git  - A small collection of crypto tools written by me
 
 =head1 DESCRIPTION
 
-These crypo tools have been written for my amusement, or the amusement of others. Nothing provided here will result in any real security.
+This is a small collection of armchair, non secure cryptography tools designed
+for my amusement, or the amusement of others. Nothing provided here will result 
+in any 'real' security.
 
-=head2 spdxor.pl
+=head2 Encryption tools
+
+=head3 spdxor.pl
 
 This is a simple tool to xor the contents of a binary file with an ascii string.
 
-=head3 Options
+=head3 Tabula_recta.pl
 
--i <file>  The input file
+This tool implements a L<Tabula Recta|http://en.wikipedia.org/wiki/Tabula_recta>
+style of encryption.  Currently it supports the 
+L<Vigenere cipher|http://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher> and the 
+L<Autokey Cipher|http://en.wikipedia.org/wiki/Autokey_cipher>.  I have plans to
+implement other Tabula Rectas at a later date.
 
--o <file>  The output string
-
--s string  The Ascii string
+=head2 Encoding tools
 
 =head2 cypherplay.pl
 
-A simple substitution cypher that I thought would be fun to play with.
-
-=head3 Options
-
--s <string>        String to encode
-
--d                 Decode flag.  Encode if not set
+A simple encoding or obfusticating method that came to my mind one day.  The 
+basics are that the characters in the coded string are the difference in place
+value between the current character and the previous character, given that A=1,
+B=2,C=3 etc.  Thus a string 'helloworld' becomes 'hxhadisdus'.
 
 =cut
