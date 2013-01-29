@@ -20,9 +20,11 @@ This is a simple tool to xor the contents of a binary file with an ascii string.
 
 This tool implements a L<Tabula Recta|http://en.wikipedia.org/wiki/Tabula_recta>
 style of encryption.  Currently it supports the 
-L<Vigenere cipher|http://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher> and the 
-L<Autokey Cipher|http://en.wikipedia.org/wiki/Autokey_cipher>.  I have plans to
-implement other Tabula Rectas at a later date.
+L<Trithemius cipher|http://en.wikipedia.org/wiki/Trithemius_cipher>, the
+L<Vigenere cipher|http://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher>, and the 
+L<Autokey Cipher|http://en.wikipedia.org/wiki/Autokey_cipher>. I don't know of any
+other Tabula Recta based ciphers, but if you would like one implemented please let
+me know.
 
 =head2 Encoding tools
 
