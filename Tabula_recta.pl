@@ -12,6 +12,7 @@
 #               -p                Preserve whitespaces and punctuation.
 #               -d                Decode the cypher, otherwise encode
 #               -t                Dump the Tabula Recta as plain text
+#               -a                Autokey mode
 #
 #       AUTHOR: Hegz
 #      VERSION: 1.0
@@ -23,7 +24,7 @@ use warnings;
 use utf8;
 use Getopt::Std;
 my %opts;
-getopts('s:k:pdt', \%opts);
+getopts('s:k:pdta', \%opts);
 
 my @alphabet = 'a' .. 'z';
 
@@ -49,6 +50,11 @@ unless ($opts{'p'}) {
 
 my @message = split(//, $opts{'s'});
 my @key = split(//,$opts{'k'});
+
+if ($opts{'a'}) {
+	push @key, @message;
+}
+
 my @out;
 unless ($opts{'d'}) {
 # Encode the message with the key
