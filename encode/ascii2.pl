@@ -23,36 +23,29 @@
 use strict;
 use warnings;
 use utf8;
-use MIME::Base64;
 use Getopt::Std;
-
+use MIME::Base64;
 my %opts;
-
 getopts('bodh6', \%opts);
 
 while (<>) {
 	chomp;
-
 	if ($opts{'b'}) {
-		my @result = convert($_,'b');
+		my @result = convert($_,'08b');
 		print "@result";
 	}
-
 	elsif ($opts{'o'}) {
 		my @result = convert($_,'o');
 		print "@result";
-
 	}
 	elsif ($opts{'d'}) {
 		my @result = convert($_,'d');
 		print "@result";
 	}
-
 	elsif ($opts{'h'}) {
 		my @result = convert($_,'x');
 		print "@result";
 	}
-
 	elsif ($opts{'6'}) {
 		my $result = encode_base64($_);
 		chomp $result;
@@ -75,7 +68,6 @@ while (<>) {
 
 print "\n";
 exit 0;
-
 
 sub convert {
 #===  FUNCTION  ================================================================
